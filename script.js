@@ -1,6 +1,8 @@
+
 function addTask() {
     let input = document.getElementById("taskInput");
     let task = input.value;
+    let status = document.getElementById("statusInput").value;
 
     if (task === "") {
         alert("Please enter a task.");
@@ -8,7 +10,7 @@ function addTask() {
     }
 
     let li = document.createElement("li");
-    li.textContent = task;
+    li.textContent = task + " - Status: " + status;
 
     li.onclick = function () {
         li.style.textDecoration = "line-through";
@@ -27,23 +29,6 @@ function addTask() {
     document.getElementById("taskList").appendChild(li);
 
     input.value = "";
-}function addTask() {
-    let input = document.getElementById("taskInput");
-    let task = input.value;
-
-    if (task === "") {
-        alert("Please enter a task.");
-        return;
-    }
-
-    let li = document.createElement("li");
-    li.textContent = task;
-
-    li.onclick = function () {
-        li.style.textDecoration = "line-through";
-    };
-
-    document.getElementById("taskList").appendChild(li);
-
-    input.value = "";
+    document.getElementById("statusInput").value = "Pending";
 }
+
