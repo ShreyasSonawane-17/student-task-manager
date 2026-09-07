@@ -1,6 +1,7 @@
 function addTask() {
     let input = document.getElementById("taskInput");
     let task = input.value;
+    let priority = document.getElementById("priorityInput").value;
 
     if (task === "") {
         alert("Please enter a task.");
@@ -8,7 +9,7 @@ function addTask() {
     }
 
     let li = document.createElement("li");
-    li.textContent = task;
+    li.textContent = task + " - Priority: " + priority;
 
     li.onclick = function () {
         li.style.textDecoration = "line-through";
