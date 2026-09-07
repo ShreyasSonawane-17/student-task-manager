@@ -2,6 +2,7 @@
 function addTask() {
     let input = document.getElementById("taskInput");
     let task = input.value;
+    let priority = document.getElementById("priorityInput").value;
     let status = document.getElementById("statusInput").value;
 
     if (task === "") {
@@ -10,7 +11,7 @@ function addTask() {
     }
 
     let li = document.createElement("li");
-    li.textContent = task + " - Status: " + status;
+    li.textContent = task + " - Priority: " + priority + " - Status: " + status;
 
     li.onclick = function () {
         li.style.textDecoration = "line-through";
@@ -29,6 +30,6 @@ function addTask() {
     document.getElementById("taskList").appendChild(li);
 
     input.value = "";
+    document.getElementById("priorityInput").value = "Medium";
     document.getElementById("statusInput").value = "Pending";
 }
-
