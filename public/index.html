@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+```
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">✓</div>
+
+            <div class="brand-text">
+                <h2>TaskFlow</h2>
+                <span>Student Manager</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#" class="nav-item active">
+                <span>▣</span>
+                Dashboard
+            </a>
+
+            <a href="#task-section" class="nav-item">
+                <span>☑</span>
+                My Tasks
+            </a>
+
+            <a href="#add-section" class="nav-item">
+                <span>＋</span>
+                Add Task
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>Stay organized.<br>Stay productive.</p>
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div class="header-content">
+
+                <p class="greeting">Welcome back 👋</p>
+
+                <h1>Student Dashboard</h1>
+
+                <p class="subtitle">
+                    Manage your academic tasks and stay on top of your work.
+                </p>
+
+            </div>
+
+            <div class="profile">
+
+                <div class="avatar">S</div>
+
+                <div class="profile-info">
+                    <strong>Student</strong>
+                    <span>Task Manager</span>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">✓</div>
+
+                <div class="stat-content">
+                    <span>Total Tasks</span>
+                    <strong id="totalTasks">0</strong>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon orange">◷</div>
+
+                <div class="stat-content">
+                    <span>Pending</span>
+                    <strong id="pendingTasks">0</strong>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">↻</div>
+
+                <div class="stat-content">
+                    <span>In Progress</span>
+                    <strong id="progressTasks">0</strong>
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">★</div>
+
+                <div class="stat-content">
+                    <span>Completed</span>
+                    <strong id="completedTasks">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Main Grid -->
+        <div class="content-grid">
+
+            <!-- Add Task -->
+            <section class="card add-card" id="add-section">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Add New Task</h2>
+
+                        <p>
+                            Create a task and keep track of your progress.
+                        </p>
+                    </div>
+
+                </div>
+
+                <form id="taskForm">
+
+                    <div class="form-group full">
+
+                        <label for="taskInput">
+                            Task Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="e.g. Complete DBMS assignment"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="dateInput">
+                                Due Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="dateInput"
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="priorityInput">
+                                Priority
+                            </label>
+
+                            <select id="priorityInput">
+
+                                <option value="Low">
+                                    Low
+                                </option>
+
+                                <option value="Medium" selected>
+                                    Medium
+                                </option>
+
+                                <option value="High">
+                                    High
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group full">
+
+                        <label for="statusInput">
+                            Status
+                        </label>
+
+                        <select id="statusInput">
+
+                            <option value="Pending" selected>
+                                Pending
+                            </option>
+
+                            <option value="In Progress">
+                                In Progress
+                            </option>
+
+                            <option value="Completed">
+                                Completed
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <button type="submit" class="add-btn">
+                        <span>＋</span>
+                        Add Task
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- Task List -->
+            <section class="card tasks-card" id="task-section">
+
+                <div class="section-heading task-heading">
+
+                    <div>
+                        <h2>My Tasks</h2>
+
+                        <p>
+                            Your current academic tasks.
+                        </p>
+                    </div>
+
+                    <span class="task-count" id="taskCount">
+                        0 Tasks
+                    </span>
+
+                </div>
+
+                <div id="emptyState" class="empty-state">
+
+                    <div class="empty-icon">
+                        ✓
+                    </div>
+
+                    <h3>No tasks yet</h3>
+
+                    <p>
+                        Add your first task to start organizing your work.
+                    </p>
+
+                </div>
+
+                <ul id="taskList"></ul>
+
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                Student Task Manager • Built for academic productivity
+            </p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>
