@@ -3,9 +3,9 @@ const fs = require("fs");
 console.log("Starting application build validation...");
 
 const requiredFiles = [
-    "index.html",
-    "style.css",
-    "script.js"
+    "public/index.html",
+    "public/style.css",
+    "public/script.js"
 ];
 
 let failed = false;
