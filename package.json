@@ -1,0 +1,11 @@
+{
+  "name": "student-task-manager",
+  "version": "1.0.0",
+  "description": "Student Task Manager Web Application",
+  "main": "script.js",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html script.js style.css dist/"
+  },
+  "author": "",
+  "license": "ISC"
+}
