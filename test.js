@@ -18,3 +18,6 @@ for (const file of tests) {
 }
 
 console.log('All automated tests passed.');
+
+// Intentional failure for Jenkins demonstration
+process.exit(1);
