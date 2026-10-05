@@ -4,8 +4,8 @@
   "description": "Student Task Manager Web Application",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js",
+    "test": "jest",
+    "start": "node app.js",
     "build": "node build.js"
   },
   "repository": {
@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/ShreyasSonawane-17/student-task-manager/issues"
   },
-  "homepage": "https://github.com/ShreyasSonawane-17/student-task-manager#readme"
+  "homepage": "https://github.com/ShreyasSonawane-17/student-task-manager#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
 }
