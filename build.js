@@ -1,26 +1,27 @@
-const fs = require("fs");
-
-console.log("Starting application build validation...");
+const fs = require('fs');
 
 const requiredFiles = [
-    "index.html",
-    "style.css",
-    "script.js"
+    'package.json',
+    'app.js',
+    'public/index.html',
+    'public/style.css',
+    'public/script.js'
 ];
 
-let failed = false;
+console.log('Starting application build validation...');
+
+let buildFailed = false;
 
 for (const file of requiredFiles) {
     if (!fs.existsSync(file)) {
         console.error(`Build Failed: ${file} not found`);
-        failed = true;
+        buildFailed = true;
     }
 }
 
-if (failed) {
-    console.error("Build step marked build as failure.");
+if (buildFailed) {
     process.exit(1);
 }
 
-console.log("Application files validated successfully.");
-console.log("Build completed successfully.");
+console.log('Application files validated successfully.');
+console.log('Build completed successfully.');
