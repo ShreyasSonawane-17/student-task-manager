@@ -4,6 +4,8 @@ const tests = [
     'app.js',
     'package.json',
     'public/index.html'
+    'public/script.js'
+    'public/style.css'
 ];
 
 console.log('Starting automated tests...');
