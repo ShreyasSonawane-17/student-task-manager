@@ -3,8 +3,8 @@ const fs = require('fs');
 const tests = [
     'app.js',
     'package.json',
-    'public/index.html'
-    'public/script.js'
+    'public/index.html',
+    'public/script.js',
     'public/style.css'
 ];
 
@@ -20,6 +20,3 @@ for (const file of tests) {
 }
 
 console.log('All automated tests passed.');
-
-// Intentional failure for Jenkins demonstration
-process.exit(1);
