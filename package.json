@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/ShreyasSonawane-17/student-task-manager#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "prom-client": "^15.1.3"
   },
   "devDependencies": {
     "jest": "^30.5.2"
