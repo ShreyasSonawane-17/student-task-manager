@@ -1,18 +1,29 @@
 {
   "name": "student-task-manager",
   "version": "1.0.0",
-  "description": "Student Task Manager Web Application",
+  "description": "Luxury Student Task Manager with React Router DOM",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "node app.js",
+    "start": "node app.js",
     "build": "node build.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ShreyasSonawane-17/student-task-manager.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react-router-dom",
+    "student-task-manager",
+    "frontend-only"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
